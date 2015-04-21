@@ -25,5 +25,5 @@ This README outlines the details of collaborating on this Ember addon.
 ```
 * Note: make sure to use the `data-original-title` attribute and not `title`  
 
-## Licence
+## License
 	MIT
