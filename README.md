@@ -4,22 +4,26 @@ This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install bootstrap-tooltip-activator --save-dev`
 
-## Running
+## Dependencis
+* Bootstrap CSS & JS (are not installed automatically)
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Usage
+* Everything that is wrapped inside the `bootstrap-tooltip-activator` will apply the bootstrap tooltips
+```handlebars
+{{#bootstrap-tooltip-activator}}
+	<button
+		data-toggle="tooltip"
+		data-original-title="Some tip">
+	</button>
+	<button
+		data-toggle="tooltip"
+		data-original-title="Another tip">
+	</button>
+{{/bootstrap-tooltip-activator}}
+```
+* Note: make sure to use the `data-original-title` attribute and not `title`  
 
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## Licence
+	MIT
