@@ -1,6 +1,6 @@
-# Bootstrap-tooltip-activator
+# Bootstrap Tooltip Activator
 
-This README outlines the details of collaborating on this Ember addon.
+Ember addon for Bootstrap tooltips.
 
 ## Installation
 
