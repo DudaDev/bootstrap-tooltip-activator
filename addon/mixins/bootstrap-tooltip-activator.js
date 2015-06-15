@@ -5,45 +5,51 @@ export default Ember.Mixin.create({
 	timer: null,
 	interval: 500,
 	isActive: true,
-	didInsertElement: function(){
-		this._super();
-		this.initTooltips();
-	},
-	initTooltips: function(){
+	cachedElements: null,
+
+	setCachedElements: Ember.on('init', function(){
+		this.set('cachedElements', Ember.A([]));
+	}),
+
+	initTooltips: Ember.on('didInsertElement', function(){
 		Ember.run.scheduleOnce('afterRender', this, function(){
 			var cachedElements = this.get('cachedElements');
 			if (this.get('isActive') && this.get('_state') === 'inDOM'){
-				this.clearUnusedElements();
+				this.clearTooltipsOfDetachedElements();
 				this.$('[data-toggle="tooltip"]').toArray().forEach(function(el){
-					var $el = $(el);
-					if (!$el.data()['bs.tooltip']){
+					var $el = $(el),
+						tooltipData = $el.data()['bs.tooltip'];
+					if (!tooltipData){
 						$el.tooltip();
 						cachedElements.pushObject($el);
 					}
 				}, this);
 				if (!this.get('timer')){
-					this.set('timer', window.setInterval(this.initTooltips.bind(this), this.get('interval')));
+					this.set('timer', window.setInterval(Ember.run.bind(this, this.initTooltips), this.get('interval')));
 				}
 			}
 		});
-	},
-	clearUnusedElements: function(){
+	}),
+
+	clearTooltipsOfDetachedElements: function(){
 		var cachedElements = this.get('cachedElements'),
 			zombies = cachedElements.filter(function(el){
-				return el.parent().length === 0;
+				return !Ember.$.contains(window.document, el[0]);
 			});
+
 		zombies.forEach(function(el){
 			el.tooltip('destroy');
 			cachedElements.removeObject(el);
 			el.remove();
 		});
 	},
-	willDestroyElement: function(){
+
+	destroyTooltips: Ember.on('willDestroyElement', function(){
 		this._super();
-		this.clearUnusedElements();
+		this.clearTooltipsOfDetachedElements();
 		this.set('isActive', false);
 		window.clearInterval(this.get('timer'));
 		this.$('[data-toggle="tooltip"]').tooltip('destroy');
-	},
-	cachedElements: Ember.A([])
+	})
+	
 });
