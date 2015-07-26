@@ -1,0 +1,13 @@
+{{#bootstrap-tooltip-activator}}
+	{{#each buttons as |button|}}
+		<button
+			id="button-{{button.number}}"
+			class='btn btn-default'
+			data-toggle="tooltip"
+			data-container="{{button.container}}"
+			data-placement="{{button.placement}}"
+			data-original-title="{{button.tip}}">
+			{{button.name}}
+		</button>	
+	{{/each}}
+{{/bootstrap-tooltip-activator}}

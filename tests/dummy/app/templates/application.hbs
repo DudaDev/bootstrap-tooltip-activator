@@ -1,15 +1,40 @@
-<h2 id="title">Welcome to Ember.js</h2>
-{{#bootstrap-tooltip-activator}}
-	{{#each buttons as |button|}}
-		<button
-			id="button-{{button.number}}"
-			class='btn btn-default'
-			data-toggle="tooltip"
-			data-container="{{button.container}}"
-			data-placement="{{button.placement}}"
-			data-original-title="{{button.tip}}">
-			{{button.name}}
-		</button>	
-	{{/each}}
-{{/bootstrap-tooltip-activator}}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Bootstrap Tooltip Activator Example</a>
+		</div>
+		<a class='github-link' href="https://github.com/ramybenaroya/bootstrap-tooltip-activator">
+			<img src="assets/images/GitHub-Mark-Light-32px.png">
+		</a>
+	</div>
+</nav>
+<div class="container">
+	<div class="starter-template">
+		<h4 id="title">Hover these buttons to see some nice Bootstrap tooltips</h4>
+		{{#bootstrap-tooltip-activator}}
+			{{#each buttons as |button|}}
+				<button
+					id="button-{{button.number}}"
+					class='btn btn-default'
+					data-toggle="tooltip"
+					data-container="{{button.container}}"
+					data-placement="{{button.placement}}"
+					data-original-title="{{button.tip}}">
+					{{button.name}}
+				</button>	
+			{{/each}}
+		{{/bootstrap-tooltip-activator}}
+		<hr>
+		<h4>Template's Code:</h4>
+		{{code-snippet name="application.hbs"}}
+		<hr>
+		<h4>Controller's Code</h4>
+		{{code-snippet name="application.js"}}
+	</div>
+</div>
 {{outlet}}
+<footer class="footer">
+    <div class="container">
+		<p class="text-muted">Maintained by @ramybenaroya (<a href="https://github.com/ramybenaroya">Github</a> | <a href="https://twitter.com/ramybenaroya">Twitter</a>)</p>
+    </div>
+</footer>

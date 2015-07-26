@@ -7,23 +7,32 @@ Ember addon for Bootstrap tooltips.
 * `npm install bootstrap-tooltip-activator --save-dev`
 
 ## Dependencis
-* Bootstrap CSS & JS (are not installed automatically)
+* Bootstrap CSS & JS
+**Note: This addon does not install it automatically**
+
+## [Demo App](http://ramybenaroya.github.io/bootstrap-tooltip-activator/)
 
 ## Usage
 * Everything that is wrapped inside the `bootstrap-tooltip-activator` will apply the bootstrap tooltips
 ```handlebars
 {{#bootstrap-tooltip-activator}}
 	<button
-		data-toggle="tooltip"
+		data-toggle="First tip"
+		data-placement="top"
+		data-container="body"
 		data-original-title="Some tip">
+		First button
 	</button>
 	<button
-		data-toggle="tooltip"
+		data-toggle="Second tip"
+		data-placement="bottom"
+		data-container=".some-selector"
 		data-original-title="Another tip">
+		Second button
 	</button>
 {{/bootstrap-tooltip-activator}}
 ```
-* Note: make sure to use the `data-original-title` attribute and not `title`  
+**Note**: make sure to use the `data-original-title` attribute and not `title`  
 
 ## License
-	MIT
+MIT | [@ramybenaroya](https://twitter.com/ramybenaroya)
