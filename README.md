@@ -10,7 +10,7 @@ Ember addon for Bootstrap tooltips.
 * `npm install bootstrap-tooltip-activator --save-dev`
 
 ## Dependencis
-* Bootstrap CSS & JS
+* Bootstrap CSS & JS  
 **Note: This addon does not install it automatically**
 
 ## [Demo App](http://DudaDev.github.io/bootstrap-tooltip-activator/)
