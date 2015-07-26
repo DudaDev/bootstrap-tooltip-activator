@@ -3,7 +3,7 @@ import Ember from 'ember';
 const Em = Ember;
 
 const {
-	$, Mixin, A, on,
+	$, Mixin, on,
 	run: {
 		bind,
 		scheduleOnce
@@ -58,6 +58,7 @@ export default Mixin.create({
 		this.clearTooltipsOfDetachedElements();
 		this.set('isActive', false);
 		clearInterval(this.get('timer'));
+		this.set('timer', null);
 		this.$('[data-toggle="tooltip"]').tooltip('destroy');
 	})
 

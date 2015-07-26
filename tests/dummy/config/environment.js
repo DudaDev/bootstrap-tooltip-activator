@@ -16,7 +16,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    buttons: 10,
+    tooltipContainer: 'body'
   };
 
   if (environment === 'development') {
@@ -37,6 +40,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.tooltipContainer = ENV.APP.rootElement;
   }
 
   if (environment === 'production') {
