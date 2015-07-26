@@ -1,4 +1,7 @@
 # Bootstrap Tooltip Activator
+[![npm version](https://badge.fury.io/js/bootstrap-tooltip-activator.svg)](http://badge.fury.io/js/bootstrap-tooltip-activator)
+[![Build Status](https://travis-ci.org/ramybenaroya/bootstrap-tooltip-activator.svg)](https://travis-ci.org/ramybenaroya/bootstrap-tooltip-activator) 
+[![Ember Observer Score](http://emberobserver.com/badges/bootstrap-tooltip-activator.svg)](http://emberobserver.com/addons/bootstrap-tooltip-activator) 
 
 Ember addon for Bootstrap tooltips.
 
