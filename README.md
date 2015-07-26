@@ -1,6 +1,6 @@
 # Bootstrap Tooltip Activator
 [![npm version](https://badge.fury.io/js/bootstrap-tooltip-activator.svg)](http://badge.fury.io/js/bootstrap-tooltip-activator)
-[![Build Status](https://travis-ci.org/ramybenaroya/bootstrap-tooltip-activator.svg)](https://travis-ci.org/ramybenaroya/bootstrap-tooltip-activator) 
+[![Build Status](https://travis-ci.org/DudaDev/bootstrap-tooltip-activator.svg)](https://travis-ci.org/DudaDev/bootstrap-tooltip-activator) 
 [![Ember Observer Score](http://emberobserver.com/badges/bootstrap-tooltip-activator.svg)](http://emberobserver.com/addons/bootstrap-tooltip-activator) 
 
 Ember addon for Bootstrap tooltips.
@@ -13,7 +13,7 @@ Ember addon for Bootstrap tooltips.
 * Bootstrap CSS & JS
 **Note: This addon does not install it automatically**
 
-## [Demo App](http://ramybenaroya.github.io/bootstrap-tooltip-activator/)
+## [Demo App](http://DudaDev.github.io/bootstrap-tooltip-activator/)
 
 ## Usage
 * Everything that is wrapped inside the `bootstrap-tooltip-activator` will apply the bootstrap tooltips
@@ -38,4 +38,4 @@ Ember addon for Bootstrap tooltips.
 **Note**: make sure to use the `data-original-title` attribute and not `title`  
 
 ## License
-MIT | [@ramybenaroya](https://twitter.com/ramybenaroya)
+MIT 
