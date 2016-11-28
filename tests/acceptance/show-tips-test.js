@@ -38,19 +38,19 @@ test('tips are being shown and hidden', function(assert) {
             let selector = `#button-${i}`;
 
             if (i < config.buttons) {
-                triggerEvent(`#button-${i}`, 'mouseenter');
+                triggerEvent(`#button-${i}`, 'mouseover');
                 andThen(function(){
                     if (prevButtonSelector) {
-                        triggerEvent(prevButtonSelector, 'mouseleave');
+                        triggerEvent(prevButtonSelector, 'mouseout');
                         andThen(function(){
                             setTimeout(check, 1000);
                         });
                     } else {
-                        check();    
+                        check();
                     }
-                    
+
                 });
-                
+
 
             } else {
                 resolve();
