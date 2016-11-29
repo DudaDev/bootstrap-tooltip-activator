@@ -59,7 +59,10 @@ export default Mixin.create({
 		this.set('isActive', false);
 		clearInterval(this.get('timer'));
 		this.set('timer', null);
-		this.$('[data-toggle="tooltip"]').tooltip('destroy');
+		const $tooltips = this.$('[data-toggle="tooltip"]');
+		if ($tooltips && typeof $tooltips.tooltip === 'function') {
+			this.$('[data-toggle="tooltip"]').tooltip('destroy');	
+		}
 	})
 
 });
