@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dummy',
     environment: environment,
-    rootURL: 'bootstrap-tooltip-activator/';
+    rootURL: 'bootstrap-tooltip-activator/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
