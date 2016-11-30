@@ -13,6 +13,13 @@ Ember addon for Bootstrap tooltips.
 * Bootstrap CSS & JS  
 **Note: This addon does not install it automatically**
 
+## Ember Compatibility Table
+
+| Ember Version       	| Bootstrap Tooltip Activator Version 	|
+| ----------------------| --------------------------------------|
+| 1.8 through 2.6.1    	| 0.0.1 =< x < 0.1.1         			|
+| 2.6.2 and beyond	   	| >=1.0.0                    			|
+
 ## [Demo App](http://DudaDev.github.io/bootstrap-tooltip-activator/)
 
 ## Usage
